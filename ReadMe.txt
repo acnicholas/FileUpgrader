@@ -2,10 +2,10 @@
 File Upgrader
 -------------
 
-Updated version to of the File Upgrader Plugin by the Autodesk Developer Network.
+Updated version of the File Upgrader Plugin by the Autodesk Developer Network.
 Updated to:
     - Work with Revit 2017
-    - Supress some dialog errors / warnings.
+    - Suppress some dialog errors / warnings.
     
     
 Original source can be found here:
