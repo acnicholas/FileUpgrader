@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>File Upgrader</Text>
+    <Description>Upgrade old version Revit documents to current one</Description>
+    <Assembly>ADNPlugin-FileUpgrader.dll</Assembly>
+    <FullClassName>ADNPlugin.Revit.FileUpgrader.Command</FullClassName>
+    <ClientId>BEA80927-9044-4c31-AAE1-48BA3527B408</ClientId>
+    <VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+    <VendorId>ADNP</VendorId>
+    <VendorDescription>Autodesk, http://www.autodesk.com/ </VendorDescription>
+  </AddIn>
+</RevitAddIns>
