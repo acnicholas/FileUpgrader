@@ -45,10 +45,9 @@ namespace ADNPlugin.Revit.FileUpgrader
             UIApp.DialogBoxShowing += new EventHandler<DialogBoxShowingEventArgs>(OnDialogShowing);
             UIApp.Application.FailuresProcessing += new EventHandler<FailuresProcessingEventArgs>(OnFailuresProcessing);
             UpgraderForm form = new UpgraderForm(commandData);
-            UIApp.Application.FailuresProcessing -= OnFailuresProcessing;
-            UIApp.DialogBoxShowing -= OnDialogShowing;
             form.ShowDialog();
-            
+            UIApp.Application.FailuresProcessing -= OnFailuresProcessing;
+            UIApp.DialogBoxShowing -= OnDialogShowing;      
             return Result.Succeeded;
         }
         
