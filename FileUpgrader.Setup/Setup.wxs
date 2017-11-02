@@ -1,0 +1,48 @@
+﻿<?xml version="1.0"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="*"
+        Name="Revit File Upgrader"
+        Language="1033"
+        Version="17.0.0"
+        UpgradeCode="E22670C1-C339-42B5-A7D2-55058BBCCC58"
+        Manufacturer="Andrew Nicholas">
+        <Package Description="#Revit File Upgrader"
+            Comments="Batch upgrade previous versions of Revit files to the Revit 2017 format"
+            InstallerVersion="200"
+            Compressed="yes"/>
+        <!--
+            Source media for the installation. 
+             Specifies a single cab file to be embedded in the installer's .msi. 
+        -->
+        <Media Id="1" Cabinet="contents.cab" EmbedCab="yes" CompressionLevel="high"/>
+        
+        <!-- Installation directory and files are defined in Files.wxs -->
+        <Directory Id="TARGETDIR" Name="SourceDir"/>
+        
+        <Feature Id="Complete"
+                 Title="Revit File Upgrader"
+                 Description="Batch upgrade previous versions of Revit files to the Revit 2017 format"
+                 Level="1">
+                 <ComponentRef Id="FileUpgrader"/>
+        </Feature>
+        
+        <!--<WixVariable Id="WixUIDialogBmp" Value="wixd.bmp" /> -->
+        <!--<WixVariable Id="WixUIBannerBmp" Value="wixb.bmp" /> -->
+        <!--<Icon Id="revinfo.ico" SourceFile="..\revinfo.ico" /> -->
+        <!--<Property Id="ARPPRODUCTICON" Value="revinfo.ico" /> -->
+        <Property Id="ARPCONTACT" Value="andrewn@scottcarver.com.au" />
+        <Property Id="ARPHELPLINK" Value="https://github.com/acnicholas/FileUpgrader"/>
+        <Property Id="ARPURLUPDATEINFO" Value="https://github.com/acnicholas/FileUpgrader/releases" />
+        
+        <!--
+             Using the Wix UI library.
+
+            WixUI_Minimal is the most basic of the WixUI stock dialog sets.
+             Its sole dialog combines the welcome and license-agreement 
+            dialogs and omits the feature customization dialog. 
+            WixUI_Minimal is appropriate when your product has no optional 
+            features.
+         -->
+        <UIRef Id="WixUI_Minimal"/>
+    </Product>
+</Wix>
