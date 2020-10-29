@@ -1,4 +1,4 @@
-﻿// (C) Copyright 2017 by Andrew Nicholas. 
+﻿// (C) Copyright 2017-2021 by Andrew Nicholas. 
 //
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
