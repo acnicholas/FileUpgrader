@@ -88,18 +88,31 @@ namespace ADNPlugin.Revit.FileUpgrader
         {
             if (e.Cancellable) {
                 e.Cancel();
+                return;
             }
             //worry about this later - 1002 = cancel
             if (e.DialogId == "TaskDialog_Unresolved_References") {
                 e.OverrideResult(1002);
+                return;
             }
             //Don't sync newly created files. 1003 = close
             if (e.DialogId == "TaskDialog_Local_Changes_Not_Synchronized_With_Central") {
                 e.OverrideResult(1003);
+                return;
             }
             if (e.DialogId == "TaskDialog_Save_Changes_To_Local_File") {
                 //Relinquish unmodified elements and worksets
                 e.OverrideResult(1001);
+                return;
+            }
+            try{
+                Autodesk.Revit.UI.TaskDialog.Show("Unhandled Message Box Showing",
+                    "DialogId: " + e.DialogId + System.Environment.NewLine +
+                    "String: " + e.ToString() + System.Environment.NewLine +
+                    "Cancellable: " + e.Cancellable.ToString() + System.Environment.NewLine);
+            } catch
+            {
+                Autodesk.Revit.UI.TaskDialog.Show("FAIL", "Error showing dialog info");
             }
         }
     }

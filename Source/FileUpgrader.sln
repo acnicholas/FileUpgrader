@@ -21,6 +21,8 @@ Global
 		Release2020|x86 = Release2020|x86
 		Release2021|x64 = Release2021|x64
 		Release2021|x86 = Release2021|x86
+		Release2022|x64 = Release2022|x64
+		Release2022|x86 = Release2022|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3F845775-4EAB-4F4C-B33C-2C1E27AB78F4}.Debug|x64.ActiveCfg = Debug|x64
@@ -41,6 +43,9 @@ Global
 		{3F845775-4EAB-4F4C-B33C-2C1E27AB78F4}.Release2021|x64.ActiveCfg = Release2021|x64
 		{3F845775-4EAB-4F4C-B33C-2C1E27AB78F4}.Release2021|x64.Build.0 = Release2021|x64
 		{3F845775-4EAB-4F4C-B33C-2C1E27AB78F4}.Release2021|x86.ActiveCfg = Release2021|x64
+		{3F845775-4EAB-4F4C-B33C-2C1E27AB78F4}.Release2022|x64.ActiveCfg = Release2022|x64
+		{3F845775-4EAB-4F4C-B33C-2C1E27AB78F4}.Release2022|x64.Build.0 = Release2022|x64
+		{3F845775-4EAB-4F4C-B33C-2C1E27AB78F4}.Release2022|x86.ActiveCfg = Release2022|x64
 		{17AE8200-090C-471C-814A-5F6426EF9CB6}.Debug|x64.ActiveCfg = Debug|x86
 		{17AE8200-090C-471C-814A-5F6426EF9CB6}.Debug|x86.ActiveCfg = Debug|x86
 		{17AE8200-090C-471C-814A-5F6426EF9CB6}.Debug|x86.Build.0 = Debug|x86
@@ -59,6 +64,9 @@ Global
 		{17AE8200-090C-471C-814A-5F6426EF9CB6}.Release2021|x64.ActiveCfg = Release|x86
 		{17AE8200-090C-471C-814A-5F6426EF9CB6}.Release2021|x86.ActiveCfg = Release|x86
 		{17AE8200-090C-471C-814A-5F6426EF9CB6}.Release2021|x86.Build.0 = Release|x86
+		{17AE8200-090C-471C-814A-5F6426EF9CB6}.Release2022|x64.ActiveCfg = Release|x86
+		{17AE8200-090C-471C-814A-5F6426EF9CB6}.Release2022|x86.ActiveCfg = Release|x86
+		{17AE8200-090C-471C-814A-5F6426EF9CB6}.Release2022|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
