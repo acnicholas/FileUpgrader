@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="Revit File Upgrader" Language="1033" Version="21.0.0.0" Manufacturer="Andrew Nicholas." UpgradeCode="366f2bda-cb94-4c8b-8d6a-5c884c9460f9">
+	<Product Id="*" Name="Revit File Upgrader" Language="1033" Version="22.0.0.0" Manufacturer="Andrew Nicholas." UpgradeCode="366f2bda-cb94-4c8b-8d6a-5c884c9460f9">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
-		<MediaTemplate />
+    <MediaTemplate EmbedCab="yes" />
 
     <Property Id="ARPCONTACT" Value="andrewn@scottcarver.com.au" />
     <Property Id="ARPHELPLINK" Value="https://github.com/acnicholas/FileUpgrader"/>
@@ -21,8 +21,6 @@
           <Directory Id="Autodesk" Name="Autodesk">
             <Directory Id="REVIT" Name="REVIT">
               <Directory Id="Addins" Name="Addins">
-                <Directory Id="Revit2017" Name="2017">          
-                </Directory>
                 <Directory Id="Revit2018" Name="2018">
                 </Directory>
                 <Directory Id="Revit2019" Name="2019">
@@ -30,6 +28,8 @@
                 <Directory Id="Revit2020" Name="2020">
                 </Directory>
                 <Directory Id="Revit2021" Name="2021">
+                </Directory>
+				<Directory Id="Revit2022" Name="2022">
                 </Directory>
               </Directory>
             </Directory>
@@ -40,10 +40,6 @@
 
   <Fragment>
     <ComponentGroup Id="ProductComponents">
-                <Component Id="FileUpgrader17" Guid="8F7F6C0E-6D74-4FCD-A75C-61CB2D71268D" DiskId="1" Directory="Revit2017">
-                  <File Id="ADNPlugin_FileUpgrader17.dll" Name="ADNPlugin-FileUpgrader.dll" Source="..\Source\bin\x64\Release2017\ADNPlugin-FileUpgrader.dll" />
-                  <File Id="ADNPlugin_FileUpgrader17.addin" Name="ADNPlugin-FileUpgrader.addin" Source="..\ADNPlugin-FileUpgrader.addin" />
-                </Component>
                 <Component Id="FileUpgrader18" Guid="E188FAFA-9FBF-4FB3-AB0B-972D4622E797" DiskId="1" Directory="Revit2018">
                   <File Id="ADNPlugin_FileUpgrader18.dll" Name="ADNPlugin-FileUpgrader.dll" Source="..\Source\bin\x64\Release2018\ADNPlugin-FileUpgrader.dll" />
                   <File Id="ADNPlugin_FileUpgrader18.addin" Name="ADNPlugin-FileUpgrader.addin" Source="..\ADNPlugin-FileUpgrader.addin" />
@@ -59,6 +55,10 @@
                 <Component Id="FileUpgrader21" Guid="084E1942-2BC4-47D1-AE1F-A977F0C2CA62" DiskId="1" Directory="Revit2021">
                   <File Id="ADNPlugin_FileUpgrader21.dll" Name="ADNPlugin-FileUpgrader.dll" Source="..\Source\bin\x64\Release2021\ADNPlugin-FileUpgrader.dll" />
                   <File Id="ADNPlugin_FileUpgrader21.addin" Name="ADNPlugin-FileUpgrader.addin" Source="..\ADNPlugin-FileUpgrader.addin" />
+                </Component>
+				<Component Id="FileUpgrader22" Guid="1577b9ef-fd2e-4df9-bd8d-b447a1441e5d" DiskId="1" Directory="Revit2022">
+                  <File Id="ADNPlugin_FileUpgrader22.dll" Name="ADNPlugin-FileUpgrader.dll" Source="..\Source\bin\x64\Release2022\ADNPlugin-FileUpgrader.dll" />
+                  <File Id="ADNPlugin_FileUpgrader22.addin" Name="ADNPlugin-FileUpgrader.addin" Source="..\ADNPlugin-FileUpgrader.addin" />
                 </Component>
     </ComponentGroup>
   </Fragment>
